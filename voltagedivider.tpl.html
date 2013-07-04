@@ -1,0 +1,42 @@
+<div>
+
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputVin">Vin</label>
+    <div class="controls">
+      <input type="text" id="inputVin" ng-model="vin"> V
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputR1">R1</label>
+    <div class="controls">
+      <input type="text" id="inputR1" ng-model="r1"> R
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputR2">R2</label>
+    <div class="controls"> 
+      <input type="text" id="inputR2" ng-model="r2"> R
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputVout">Vout</label>
+    <div class="controls">
+      <input type="text" id="inputVout" ng-model="vout"> V
+    </div>
+  </div>
+  
+</form>
+
+<div class="logs">
+  <div ng-repeat="log in logs | orderBy:'-date'">
+    {{log.vin | number}} V + 
+    <i>{{log.r1 | number}} R </i>+ 
+    <i>{{log.r2 | number}} R </i>= <b>{{log.vout | number}} V</b>
+  </div>
+</div>
+
+</div>

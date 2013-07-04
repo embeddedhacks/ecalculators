@@ -1,0 +1,31 @@
+<div>
+
+<form class="form-horizontal">    
+  <div class="control-group">
+    <label class="control-label" for="inputR1">Desired value</label>
+    <div class="controls">
+      <input type="text" id="inputR1" ng-model="r1"> R
+    </div>
+  </div>
+</form>
+
+<table class="table" ng-show="foundValues">
+  <thead>
+    <tr>
+      <th>R1</th>
+      <th>Serial</th>
+      <th>R2</th>
+      <th>Sum</th>
+      <th>Diff</th>
+    </tr>
+  </thead>
+  <tr ng-repeat="value in foundValues | orderBy:'diff' | limitTo:5">
+    <td>{{value.values.value1 | number:0}}</td>
+    <td>{{value.values.isSerial}}</td>
+    <td>{{value.values.value2 | number:0}}</td>
+    <td>{{value.values.sum | number:2}}</td>
+    <td>{{value.diffPercent | number:2}} %</td>
+  </tr>
+</table>
+
+</div>

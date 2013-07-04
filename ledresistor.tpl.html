@@ -1,0 +1,43 @@
+<div>
+
+<form class="form-horizontal">    
+  <div class="control-group">
+    <label class="control-label" for="inputVin">Supply voltage</label>
+    <div class="controls">
+      <input type="text" id="inputVin" ng-model="vin"> V
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputLed">LED voltage drop</label>
+    <div class="controls">
+      <input type="text" id="inputLed" ng-model="led"> V
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputCurrent">Led current</label>
+    <div class="controls"> 
+      <input type="text" id="inputCurrent" ng-model="current"> mA
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputR1">Resistor</label>
+    <div class="controls">
+      <input type="text" id="inputR1" ng-model="r1"> R <span ng-show="r1W">/ <b>{{r1W | number}} mW</b></span>
+    </div>
+  </div>
+  
+  
+</form>
+
+<div class="logs">
+  <div ng-repeat="log in logs | orderBy:'-date'">
+    {{log.vin | number}} V - 
+    <i>{{log.led | number}} V </i>@ 
+    <i>{{log.current | number}} mA </i>= <b>{{log.r1 | number}} R ({{log.r1W | number}} mW)</b>
+  </div>
+</div>
+
+</div>
