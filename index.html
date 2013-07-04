@@ -26,12 +26,12 @@
   <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
-          <div class="well sidebar-nav">
+          <div class="well sidebar-nav" ng-controller="MenuCtrl">
             <ul class="nav nav-list">
               <li class="nav-header">Circuit</li>
-              <li><a href="#/VoltageDivider">Voltage divider</a></li>
-              <li><a href="#/LedResistor">Led resistor</a></li>
-              <li><a href="#/ClosestResistor">Closest resistor</a></li>
+              <li ng-class="{'active':sel==0}"><a href="#/VoltageDivider">Voltage divider</a></li>
+              <li ng-class="{'active':sel==1}"><a href="#/LedResistor">Led resistor</a></li>
+              <li ng-class="{'active':sel==2}"><a href="#/ClosestResistor">Closest resistor</a></li>
               <li class="nav-header">PCB</li>
               <li><i>Todo... :)</i></li>
               <li class="nav-header">Links</li>

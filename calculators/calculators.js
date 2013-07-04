@@ -8,12 +8,12 @@ app.config(function($routeProvider) {
   });
   
 app
-	.controller('VoltageDividerCtrl', function() {
-		
+	.controller('VoltageDividerCtrl', function($rootScope) {
+		$rootScope.sel = 0;
 	})
-	.controller('ClosestResistorCtrl', function() {
-		
+	.controller('LedResistorCtrl', function($rootScope) {
+		$rootScope.sel = 1;
 	})
-	.controller('LedResistorCtrl', function() {
-		
+	.controller('ClosestResistorCtrl', function($rootScope) {
+		$rootScope.sel = 2;
 	});
