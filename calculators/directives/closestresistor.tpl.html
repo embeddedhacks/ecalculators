@@ -1,12 +1,25 @@
 <div>
 
-<form class="form-horizontal">    
+<form class="form-horizontal">
   <div class="control-group">
     <label class="control-label" for="inputR1">Desired value</label>
     <div class="controls">
       <input type="text" id="inputR1" ng-model="r1" placeholder="Enter resistance value"> R
     </div>
   </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputR1">Series</label>{{isE24}}
+    <div class="controls">
+		<label class="radio">
+			<input type="radio" id="inputR1" ng-model="series" name="series" value="12" /> E12
+		</label>
+		<label class="radio">
+			<input type="radio" id="inputR1" ng-model="series" name="series" value="24" /> E24
+		</label>
+    </div>
+  </div>
+  
 </form>
 
 <table class="table" ng-show="foundValues">
@@ -22,8 +35,8 @@
   <tr ng-repeat="value in foundValues | orderBy:'diff' | limitTo:10">
     <td>{{value.values.value1 | number:0}}</td>
     <td>
-		<span ng-show="value.values.isSerial">Serial</span>
-		<span ng-hide="value.values.isSerial">Parallel</span>
+		<span ng-show="value.values.isSerial">In series</span>
+		<span ng-hide="value.values.isSerial">In parallel</span>
 	</td>
     <td>{{value.values.value2 | number:0}}</td>
     <td>{{value.values.sum | number:2}}</td>

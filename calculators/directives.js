@@ -174,9 +174,11 @@ app.directive('closestresistor', function($filter, $timeout) {
 		templateUrl: 'calculators/directives/closestresistor.tpl.html',
     scope: true,
 		link: function(scope, element, attributes, model) {
+		scope.series = 12;
       
       var factors = [1, 10, 100];
       var e12 = [1.0, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2, 10.0];
+      var e24 = [1.0, 1.1, 1.2, 1.3, 1.5, 1.6, 1.8, 2.0, 2.2, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.2, 6.8, 7.5, 8.2, 9.1, 10.0];
       
       var timeoutHandle;
       var onChangeEvent = function() {
@@ -222,9 +224,11 @@ app.directive('closestresistor', function($filter, $timeout) {
         scope.foundValues = [];
         var arr = [];
         
+		var resValues = (scope.series == 24)? e24 : e12;
+		
         //go throught all possible values
-        angular.forEach(e12, function(value1) {
-          angular.forEach(e12, function(value2) {
+        angular.forEach(resValues, function(value1) {
+          angular.forEach(resValues, function(value2) {
             var sum = value1 + value2;
             var values = getValues(value1, value2);
             
@@ -248,6 +252,9 @@ app.directive('closestresistor', function($filter, $timeout) {
       };
       
       scope.$watch('r1', function(value) {
+        onChangeEvent();
+      });
+      scope.$watch('series', function(value) {
         onChangeEvent();
       });
     }
