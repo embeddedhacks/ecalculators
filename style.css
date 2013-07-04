@@ -1,3 +1,7 @@
+body {
+padding-top: 20px;
+padding-bottom: 20px;
+}
 .form-horizontal .control-label {
   width: 120px !important;
 }

@@ -13,7 +13,7 @@
   <thead>
     <tr>
       <th>R1</th>
-      <th>Serial</th>
+      <th>Connection</th>
       <th>R2</th>
       <th>Sum</th>
       <th>Diff</th>
@@ -21,7 +21,10 @@
   </thead>
   <tr ng-repeat="value in foundValues | orderBy:'diff' | limitTo:5">
     <td>{{value.values.value1 | number:0}}</td>
-    <td>{{value.values.isSerial}}</td>
+    <td>
+		<span ng-show="value.values.isSerial">Serial</span>
+		<span ng-hide="value.values.isSerial">Parallel</span>
+	</td>
     <td>{{value.values.value2 | number:0}}</td>
     <td>{{value.values.sum | number:2}}</td>
     <td>{{value.diffPercent | number:2}} %</td>
