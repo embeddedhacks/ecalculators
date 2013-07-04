@@ -2,28 +2,28 @@
 
 <form class="form-horizontal">    
   <div class="control-group">
-    <label class="control-label" for="inputVin">Supply voltage</label>
+    <label class="control-label" for="inputVin">Supply voltage, <i>VIN</i></label>
     <div class="controls">
       <input type="text" id="inputVin" ng-model="vin"> V
     </div>
   </div>
   
   <div class="control-group">
-    <label class="control-label" for="inputLed">LED voltage drop</label>
+    <label class="control-label" for="inputLed">LED voltage drop, <i>V(LED)</i></label>
     <div class="controls">
       <input type="text" id="inputLed" ng-model="led"> V
     </div>
   </div>
   
   <div class="control-group">
-    <label class="control-label" for="inputCurrent">Led current</label>
+    <label class="control-label" for="inputCurrent">Led current, <i>I(LED)</i></label>
     <div class="controls"> 
       <input type="text" id="inputCurrent" ng-model="current"> mA
     </div>
   </div>
   
   <div class="control-group">
-    <label class="control-label" for="inputR1">Resistor</label>
+    <label class="control-label" for="inputR1">Resistor, <i>R</i></label>
     <div class="controls">
       <input type="text" id="inputR1" ng-model="r1"> R <span ng-show="r1W">/ <b>{{r1W | number}} mW</b></span>
     </div>

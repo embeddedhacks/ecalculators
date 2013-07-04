@@ -1,0 +1,87 @@
+.flipvertical-enter,
+.flipvertical-leave,
+.flipvertical-move { 
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    transition: 0.5s all;
+	display: block;
+	position:relative;
+}
+
+.flipvertical-enter {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.flipvertical-enter.flipvertical-enter-active {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.flipvertical-leave {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.flipvertical-leave.flipvertical-leave-active {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.opacity-enter,
+.opacity-leave,
+.opacity-move { 
+    -webkit-transition: 1s all ease-in-out;
+    -moz-transition: 1s all ease-in-out;
+    -ms-transition: 1s all ease-in-out;
+    -o-transition: 1s all ease-in-out;
+    transition: 1s all ease-in-out;
+}
+.opacity-enter {
+    opacity: 0;
+}
+.opacity-enter.opacity-enter-active {
+    opacity: 1;
+}
+.opacity-leave {
+    opacity: 1;
+}
+.opacity-leave.opacity-leave-active {
+    opacity: 0;
+}
+
+.slide-enter, 
+.slide-leave
+{ 
+    -webkit-transition: 600ms cubic-bezier(0.600, -0.280, 0.735, 0.045) all;
+    -moz-transition: 600ms cubic-bezier(0.600, -0.280, 0.735, 0.045) all;
+    -ms-transition: 600ms cubic-bezier(0.600, -0.280, 0.735, 0.045) all;
+    -o-transition: 600ms cubic-bezier(0.600, -0.280, 0.735, 0.045) all;
+    transition: 600ms cubic-bezier(0.600, -0.280, 0.735, 0.045) all;
+} 
+ 
+.slide-enter {
+    left: 100%;
+}
+.slide-enter.slide-enter-active {
+    left: 0;
+}
+ 
+.slide-leave {
+    left: 0;
+}
+.slide-leave.slide-leave-active{
+    left: -100%;
+}

@@ -19,7 +19,7 @@
       <th>Diff</th>
     </tr>
   </thead>
-  <tr ng-repeat="value in foundValues | orderBy:'diff' | limitTo:5">
+  <tr ng-repeat="value in foundValues | orderBy:'diff' | limitTo:10">
     <td>{{value.values.value1 | number:0}}</td>
     <td>
 		<span ng-show="value.values.isSerial">Serial</span>

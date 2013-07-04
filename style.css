@@ -2,14 +2,28 @@ body {
 padding-top: 20px;
 padding-bottom: 20px;
 }
+.view-container {
+overflow:hidden;
+position: relative;
+height: 800px;
+}
+.view  {
+position: absolute;
+float:left;
+width: 100%;
+}
+.clearfix {
+clear: both;
+}
+
 .form-horizontal .control-label {
-  width: 120px !important;
+  width: 165px !important;
 }
 .form-horizontal .controls {
-  margin-left: 140px !important;
+  margin-left: 185px !important;
 }
 .form-horizontal .input {
-  width: 100px;
+  width: 80px;
 }
 
 .panel {
@@ -18,7 +32,12 @@ padding-bottom: 20px;
   margin: 20px;
 }
 
+.exampleimg {
+height: 350px;
+width: 350px;
+}
+
 .logs {
-  height: 140px;
+  max-height: 200px;
   overflow: hidden;
 }
