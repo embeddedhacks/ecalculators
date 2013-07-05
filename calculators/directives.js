@@ -3,7 +3,7 @@ app.directive('voltagedivider', function($filter, $timeout) {
 	return {
 		restrict: 'A',
 		templateUrl: 'calculators/directives/voltagedivider.tpl.html',
-    scope: true,
+		scope: true,
 		link: function(scope, element, attributes, model) {
 		
 			var changed = '';
